@@ -160,31 +160,31 @@
                 </div>
                 <!------------------------------------ 4 ------------------------------------>
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="imgs/pokemon.jpg" alt="Pokemon" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('Pokemon')">
-                    <h3 class="text-2xl text-center font-semibold mb-2">Pokemon Starter Pack</h3>
+                    <img src="imgs/ariz.jpg" alt="ariz lebnan" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('ariz')">
+                    <h3 class="text-2xl text-center font-semibold mb-2">Arz Nike</h3>
                     <div id="productForm4" class="flex items-start space-x-40 py-5">
                         <div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay4')">
+                                    <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(50, 'priceDisplay4')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay4')">
+                                    <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(55, 'priceDisplay4')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
                                 </label>
                             </div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay4')">
+                                    <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(60, 'priceDisplay4')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
                                 </label>
                             </div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay4')">
+                                    <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(65, 'priceDisplay4')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
                                 </label>
                             </div>
@@ -235,8 +235,8 @@
     </section>
 
     <script>
-        function showPrice(price, targetId) {
-            document.getElementById(targetId).innerText = 'Price: $' + price;
+        function showPrice(price, productId) {
+            document.getElementById(productId).innerText = 'Price: $' + price;
         }
     </script>
 </body>
