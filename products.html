@@ -9,32 +9,74 @@
     <link href="output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-        /* Style for smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
-        /* Font Styles */
         .sub_text {
             font-family: 'Merriweather', serif;
             color: #982a35;
         }
-
         .header_text {
             font-family: 'Lora', serif;
             color: #982a35;
         }
-
         .body_text {
             font-family: 'Merriweather', serif;
             color: #452f14;
         }
-
         .options_text {
             font-family: 'Lora', serif;
             color: black;
         }
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            padding: 1rem;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: hidden; /* Prevent overflow */
+        }
+        .modal-content img {
+            max-width: 100%; /* Ensure the image doesn't overflow */
+            max-height: 80vh; /* Limit the height to 80% of the viewport height */
+            object-fit: contain; /* Maintain aspect ratio */
+        }
+        .close, .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+        }
+        .close {
+            top: 5%;
+            right: 5%;
+            transform: none;
+        }
+        .prev {
+            left: 5%;
+        }
+        .next {
+            right: 5%;
+        }
     </style>
 </head>
+
 <body class="font-sans text-gray-900" style="background: #ffd6c0;">
     <!-- Header with Top Navigation -->
     <header class="shadow-md sticky top-0 z-50" style="background-color: #ffd6c0;">
@@ -85,7 +127,7 @@
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
                                     <input type="radio" name="productType1" value="crewneck" class="form-radio" onclick="showPrice(55, 'priceDisplay1')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
@@ -99,9 +141,82 @@
                         <div id="priceDisplay1" class="text-2xl font-semibold"></div>
                     </div>
                 </div>
+                                                                <!-- 13-->  
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="imgs/deadkitty.jpg" alt="Hello Kitty x DeadPool" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('deadkitty')">
+                    <h3 class="text-2xl text-center font-semibold mb-2">Hello Kitty x DeadPool</h3>
+                    <div id="productForm12" class="flex items-start space-x-28 py-5">
+                        <div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType1" value="tshirt" class="form-radio" onclick="showPrice(45, 'priceDisplay12')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType1" value="longsleeve" class="form-radio" onclick="showPrice(50, 'priceDisplay12')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType1" value="crewneck" class="form-radio" onclick="showPrice(55, 'priceDisplay12')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType1" value="hoodie" class="form-radio" onclick="showPrice(60, 'priceDisplay12')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Price Display -->
+                        <div id="priceDisplay12" class="text-2xl font-semibold"></div>
+                    </div>
+                </div>
+                                                      <!------------------------------------ 5 ------------------------------------>
+
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                <img src="imgs/f1.jpg" alt="Formula1" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('f1')">
+                <h3 class="text-2xl text-center font-semibold mb-2">Formula 1</h3>
+                <div id="productForm5" class="flex items-start space-x-28 py-5">
+                    <div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay5')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay5')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay5')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay5')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Price Display -->
+                    <div id="priceDisplay5" class="text-2xl font-semibold"></div>
+                </div>
+            </div>
+
+
                 <!-- Repeat for other products -->
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="imgs/pokemon.jpg" alt="Pokemon" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('Pokemon')">
+                    <img src="imgs/pokemon.jpg" alt="Pokemon" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('pokemon')">
                     <h3 class="text-2xl text-center font-semibold mb-2">Pokemon Starter Pack</h3>
                     <div id="productForm2" class="flex items-start space-x-28 py-5">
                         <div>
@@ -120,7 +235,7 @@
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
                                     <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay2')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
@@ -134,9 +249,45 @@
                         <div id="priceDisplay2" class="text-2xl font-semibold"></div>
                     </div>
                 </div>
+                <!------------------------------------ 11 ------------------------------------>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="imgs/charm.jpg" alt="charmander evolution" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('charm')">
+                    <h3 class="text-2xl text-center font-semibold mb-2">Charmander Evolution</h3>
+                    <div id="productForm11" class="flex items-start space-x-28 py-5">
+                        <div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay11')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay11')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay11')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay11')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Price Display -->
+                        <div id="priceDisplay11" class="text-2xl font-semibold"></div>
+                    </div>
+                </div>
+
                 <!------------------------------------ 3 ------------------------------------>
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="imgs/onepiece.jpg" alt="Luffy Hat" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('OnePiece')">
+                    <img src="imgs/onepiece.jpg" alt="Luffy Hat" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('onepiece')">
                     <h3 class="text-2xl text-center font-semibold mb-2">Luffy Hat</h3>
                     <div id="productForm3" class="flex items-start space-x-28 py-5">
                         <div>
@@ -155,7 +306,7 @@
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
                                     <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(35, 'priceDisplay3')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
@@ -169,6 +320,77 @@
                         <div id="priceDisplay3" class="text-2xl font-semibold"></div>
                     </div>
                 </div>
+                                                        <!--------------- 14--------->  
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                <img src="imgs/lebmap.jpg" alt="lebmap" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('lebmap')">
+                <h3 class="text-2xl text-center font-semibold mb-2">Lebanon Map</h3>
+                <div id="productForm14" class="flex items-start space-x-28 py-5">
+                    <div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType1" value="tshirt" class="form-radio" onclick="showPrice(25, 'priceDisplay14')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType1" value="longsleeve" class="form-radio" onclick="showPrice(30, 'priceDisplay14')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType1" value="crewneck" class="form-radio" onclick="showPrice(35, 'priceDisplay14')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType1" value="hoodie" class="form-radio" onclick="showPrice(40, 'priceDisplay14')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Price Display -->
+                    <div id="priceDisplay14" class="text-2xl font-semibold"></div>
+                </div>
+            </div>
+                                                        <!------------------------------------ 9 ------------------------------------>
+
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <img src="imgs/countries.jpg" alt="countries" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('countries')">
+                <h3 class="text-2xl text-center font-semibold mb-2">Custom Country</h3>
+                <div id="productForm9" class="flex items-start space-x-28 py-5">
+                    <div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(35, 'priceDisplay9')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(40, 'priceDisplay9')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(45, 'priceDisplay9')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(50, 'priceDisplay9')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Price Display -->
+                    <div id="priceDisplay9" class="text-2xl font-semibold"></div>
+                </div>
+            </div>
                 <!------------------------------------ 4 ------------------------------------>
                 <div class="bg-white p-4 rounded-lg shadow-lg">
                     <img src="imgs/ariz.jpg" alt="ariz lebnan" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('ariz')">
@@ -190,7 +412,7 @@
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
                                     <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(60, 'priceDisplay4')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
@@ -204,43 +426,77 @@
                         <div id="priceDisplay4" class="text-2xl font-semibold"></div>
                     </div>
                 </div>
-                <!------------------------------------ 5 ------------------------------------>
-
+                <!------------------------------------ 10 ------------------------------------>
                 <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="imgs/f1.jpg" alt="Formula1" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('F1')">
-                    <h3 class="text-2xl text-center font-semibold mb-2">Formula 1</h3>
-                    <div id="productForm5" class="flex items-start space-x-28 py-5">
+                    <img src="imgs/alb.jpg" alt="albania" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('alb')">
+                    <h3 class="text-2xl text-center font-semibold mb-2">Albania Nike</h3>
+                    <div id="productForm10" class="flex items-start space-x-28 py-5">
                         <div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay5')">
+                                    <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(35, 'priceDisplay10')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay5')">
+                                    <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(40, 'priceDisplay10')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
                                 </label>
                             </div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay5')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(45, 'priceDisplay10')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
-                                    <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay5')">
+                                    <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(50, 'priceDisplay10')">
                                     <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
                                 </label>
                             </div>
                         </div>
                         <!-- Price Display -->
-                        <div id="priceDisplay5" class="text-2xl font-semibold"></div>
+                        <div id="priceDisplay10" class="text-2xl font-semibold"></div>
                     </div>
-                </div>
+                </div>                
+                <!------------------------------------ 15 ------------------------------------>
 
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                <img src="imgs/nintendo.jpg" alt="nintendo" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('nintendo')">
+                <h3 class="text-2xl text-center font-semibold mb-2">Nintendo Character</h3>
+                <div id="productForm15" class="flex items-start space-x-28 py-5">
+                    <div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay15')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay15')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay15')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                            </label>
+                        </div>
+                        <div class="mb-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay15')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Price Display -->
+                    <div id="priceDisplay15" class="text-2xl font-semibold"></div>
+                </div>
+            </div>
 
                 <!------------------------------------ 6 ------------------------------------>
 
@@ -264,7 +520,7 @@
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
                                     <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay6')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
@@ -301,7 +557,7 @@
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
                                     <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(45, 'priceDisplay7')">
-                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                                 </label>
                             </div>
                             <div class="mb-4">
@@ -315,99 +571,184 @@
                         <div id="priceDisplay7" class="text-2xl font-semibold"></div>
                     </div>
                 </div>
-               <!------------------------------------ 8 ------------------------------------>
+
+                                <!------------------------------------ 8 ------------------------------------>
+
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="imgs/jojo.jpg" alt="jojos" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('jojos')">
+                    <h3 class="text-2xl text-center font-semibold mb-2">Giorno and Bruno</h3>
+                    <div id="productForm8" class="flex items-start space-x-28 py-5">
+                        <div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(35, 'priceDisplay8')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(40, 'priceDisplay8')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(45, 'priceDisplay8')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(50, 'priceDisplay8')">
+                                    <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Price Display -->
+                        <div id="priceDisplay8" class="text-2xl font-semibold"></div>
+                    </div>
+                </div>
+
+
+               <!------------------------------------ 19 ------------------------------------>
 
                <div class="bg-white p-4 rounded-lg shadow-lg">
-                <img src="imgs/4by4custom.png" alt="4x4 Custom" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('4x4 Custom')">
+                <img src="imgs/4by4custom.png" alt="4x4 Custom" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('4x4custom')">
                 <h3 class="text-2xl text-center font-semibold mb-2">Custom 4inx4in Design</h3>
                 <p class="text-sm font-semibold">**Please note these prices are minimum, however prices will increase depending 
                     on the complexity of the design**
                 </p>
-                <div id="productForm8" class="flex items-start space-x-28 py-5">
+                <div id="productForm19" class="flex items-start space-x-28 py-5">
                     <div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(25, 'priceDisplay8')">
+                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(25, 'priceDisplay19')">
                                 <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
                             </label>
                         </div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(30, 'priceDisplay8')">
+                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(30, 'priceDisplay19')">
                                 <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
                             </label>
                         </div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(35, 'priceDisplay8')">
-                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(35, 'priceDisplay19')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                             </label>
                         </div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(40, 'priceDisplay8')">
+                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(40, 'priceDisplay19')">
                                 <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
                             </label>
                         </div>
 
                     </div>
                     <!-- Price Display -->
-                    <div id="priceDisplay8" class="text-2xl font-semibold"></div>
+                    <div id="priceDisplay19" class="text-2xl font-semibold"></div>
                 </div>
             </div>
 
-               <!------------------------------------ 9 ------------------------------------>
+               <!------------------------------------ 20 ------------------------------------>
 
                <div class="bg-white p-4 rounded-lg shadow-lg">
-                <img src="imgs/4by6custom.png" alt="4x6 Custom" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('4x6 Custom')">
+                <img src="imgs/4by6custom.png" alt="4x6 Custom" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('4x6custom')">
                 <h3 class="text-2xl text-center font-semibold mb-2">Custom 4inx6in Design</h3>
                 <p class="text-sm font-semibold">**Please note these prices are minimum, however prices will increase depending 
                     on the complexity of the design**
                 </p>
-                <div id="productForm9" class="flex items-start space-x-28 py-5">
+                <div id="productForm20" class="flex items-start space-x-28 py-5">
                     <div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay9')">
+                                <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay20')">
                                 <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
                             </label>
                         </div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay9')">
+                                <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay20')">
                                 <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
                             </label>
                         </div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay9')">
-                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Crewneck</span>
+                                <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay20')">
+                                <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
                             </label>
                         </div>
                         <div class="mb-4">
                             <label class="inline-flex items-center">
-                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay9')">
+                                <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay20')">
                                 <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
                             </label>
                         </div>
 
                     </div>
                     <!-- Price Display -->
-                    <div id="priceDisplay9" class="text-2xl font-semibold"></div>
+                    <div id="priceDisplay20" class="text-2xl font-semibold"></div>
                 </div>
             </div>
 
             </div>
         </div>
 
-
-
     </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Product Image" class="w-full h-auto">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
 
     <script>
         function showPrice(price, productId) {
             document.getElementById(productId).innerText = 'Price: $' + price;
         }
+
+        let currentProduct = '';
+        let currentImageIndex = 0;
+
+        // Define your products and images here
+        const productImages = {
+            'hellokittyxspiderman': ['imgs/hellospidey.jpg', 'imgs/hellospidey2.jpg'],
+            'deadkitty':['imgs/deadkitty.jpg', 'imgs/deadkitty2.jpg'],
+            'pokemon': ['imgs/pokemon.jpg', 'imgs/pokemon2.jpg'],
+            'charm': ['imgs/charm.jpg', 'imgs/charm2.jpg'],
+            'onepiece': ['imgs/onepiece.jpg', 'imgs/onepiece2.jpg'],
+            'lebmap':['imgs/lebmap.jpg', 'imgs/lebmap2.jpg'],
+            'ariz': ['imgs/ariz.jpg', 'imgs/arz2.jpg'],
+            'alb':['imgs/alb.jpg','imgs/alb2.jpg'],
+            'nintendo':['imgs/nintendo.jpg','imgs/yoshi.jpg','imgs/wario.jpg','imgs/luigi.jpg','imgs/rosa.jpg'],
+            'f1': ['imgs/f1.jpg'],
+            'cinna': ['imgs/cinna.jpg'],
+            'megumi dd': ['imgs/jjk.jpg', 'imgs/jjk1.jpg'],
+            'jojos': ['imgs/jojo.jpg'],
+            'countries': ['imgs/countries.jpg', 'imgs/afgh.jpg'],
+        };
+
+        function openModal(product) {
+            currentProduct = product;
+            currentImageIndex = 0;
+            document.getElementById('modalImage').src = productImages[currentProduct][currentImageIndex];
+            document.getElementById('myModal').style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        function changeImage(direction) {
+            const images = productImages[currentProduct];
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            document.getElementById('modalImage').src = images[currentImageIndex];
+        }    
     </script>
 </body>
 </html>
