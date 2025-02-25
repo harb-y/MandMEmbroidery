@@ -117,7 +117,76 @@
                             <p class="sub_text text-3xl md:text-3xl lg:text-5xl">COMING SOON</p>
                         </div>        
                     </div>       
-
+                    <!------------------------------------ 26 ------------------------------------>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="imgs/cornerRamadan" alt="lil pokemons" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('cornerRam')">
+                        <h3 class="text-2xl text-center font-semibold mb-2">Corner Ramadan Design</h3>
+                        <div id="productForm26" class="flex items-start space-x-28 py-5">
+                            <div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(25, 'priceDisplay26')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                                    </label>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(30, 'priceDisplay26')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                                    </label>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(35, 'priceDisplay26')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                                    </label>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(40, 'priceDisplay26')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Price Display -->
+                            <div id="priceDisplay26" class="text-2xl font-semibold"></div>
+                        </div>
+                    </div> 
+                    <!------------------------------------ 27 ------------------------------------>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="imgs/centerRamadan" alt="lil pokemons" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('centerRam')">
+                        <h3 class="text-2xl text-center font-semibold mb-2">Center Ramadan Design</h3>
+                        <div id="productForm27" class="flex items-start space-x-28 py-5">
+                            <div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="tshirt" class="form-radio" onclick="showPrice(30, 'priceDisplay27')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">T-Shirt</span>
+                                    </label>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="longsleeve" class="form-radio" onclick="showPrice(35, 'priceDisplay27')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Long Sleeve</span>
+                                    </label>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="crewneck" class="form-radio" onclick="showPrice(40, 'priceDisplay27')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Sweatshirt</span>
+                                    </label>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="productType2" value="hoodie" class="form-radio" onclick="showPrice(45, 'priceDisplay27')">
+                                        <span class="options_text text-xl md:text-lg lg:text-2xl ml-2">Hoodie</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Price Display -->
+                            <div id="priceDisplay27" class="text-2xl font-semibold"></div>
+                        </div>
+                    </div>                     
                     <!------------------------------------ 16 ------------------------------------>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="imgs/multipoke.jpg" alt="lil pokemons" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('multipoke')">
@@ -373,7 +442,7 @@
                 <div class="bg-white p-4 rounded-lg shadow-lg">
                     <img src="imgs/HP.jpg" alt="HP" class="w-full h-auto object-cover mb-4 rounded cursor-pointer" onclick="openModal('HP')">
                     <h3 class="text-2xl text-center font-semibold mb-2">Harry Potter</h3>
-                    <div id="productForm23" class="flex items-start space-x-28 py-5">
+                    <div id="productForm24" class="flex items-start space-x-28 py-5">
                         <div>
                             <div class="mb-4">
                                 <label class="inline-flex items-center">
@@ -943,6 +1012,8 @@
         // Define your products and images here
         const productImages = {
             'totes': ['imgs/lebtote2.png', 'imgs/palitote.png', 'imgs/lebtote.png', 'imgs/lebtote3.png', 'imgs/palitote2.png'],
+            'cornerRam': ['imgs/cornerRamadan.jpg','imgs/cornerRamadan3.jpg'],
+            'centerRam': ['imgs/centerRamadan.jpg','imgs/centerRamadan2.jpg' ],
             'hellokittyxspiderman': ['imgs/hellospidey.jpg', 'imgs/hellospidey2.jpg'],
             'deadkitty':['imgs/deadkitty.jpg', 'imgs/deadkitty2.jpg'],
             'pokemon': ['imgs/pokemon.jpg','imgs/poke3.jpg', 'imgs/pokemon2.jpg'],
@@ -962,7 +1033,7 @@
             'spiderweb': ['imgs/spiderweb.jpg', 'imgs/spiderweb2.jpg'],
             'cr7': ['imgs/cr7.jpg', 'imgs/cr72.jpg'],
             'sailormoon': ['imgs/sailormoon.jpg'],
-            'HP': ['imgs/HP.jpg'],
+            'HP': ['imgs/HP.jpg','imgs/HP2.jpg'],
             'akuma': ['imgs/akuma2.jpg','imgs/akuma.jpg' ],
             'nikebat': ['imgs/nikebat.jpg'],
         };
